@@ -1,0 +1,19 @@
+<!-- <div>
+    <label for="active">actif: </label>
+    <p-checkbox [(ngModel)]="personnageActif" [binary]="true" id="active" (onChange)="check()"></p-checkbox>
+</div> -->
+<form [formGroup]="nouveauPersonnage" (submit)="sauvegarderPersonnage()">
+    <div class="form-row">
+        <label for="name">nom: </label>
+        <input pInputText type="text" id="name" formControlName="name">
+    </div>
+    <div class="form-row">
+        <label for="title">titre: </label>
+        <input pInputText type="text" id="title" formControlName="title">
+    </div>
+    <div class="form-row">
+        <label for="active">actif: </label>
+        <p-checkbox id="active" [binary]="true" formControlName="active"></p-checkbox>
+    </div>
+    <button pButton>Enregistrer</button>
+</form>

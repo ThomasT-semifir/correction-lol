@@ -1,0 +1,20 @@
+<p-table [value]="listePersonnages" styleClass="p-datatable-striped" responsiveLayout="scroll">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Title</th>
+            <th>Active</th>
+            <th>Supprimer</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-personnage>
+        <tr>
+            <td>{{personnage.id}}</td>
+            <td>{{personnage.name}}</td>
+            <td>{{personnage.title}}</td>
+            <td><p-checkbox [(ngModel)]="personnage.active" [binary]="true" (onChange)="changementStatut(personnage)"></p-checkbox></td>
+            <td><i class="pi pi-times" (click)="supprimerPersonnage(personnage.id)"></i></td>
+        </tr>
+    </ng-template>
+</p-table>

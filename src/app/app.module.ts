@@ -10,18 +10,24 @@ import { ColorPickerModule } from 'primeng/colorpicker';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListePersonnagesComponent } from './personnages/components/liste-personnages/liste-personnages.component';
-import {TableModule} from 'primeng/table';
+import { TableModule } from 'primeng/table';
 import { CreationPersonnageComponent } from './personnages/components/creation-personnage/creation-personnage.component';
-import {InputTextModule} from 'primeng/inputtext';
-import {CheckboxModule} from 'primeng/checkbox';
-import {OverlayPanelModule} from 'primeng/overlaypanel';
+import { InputTextModule } from 'primeng/inputtext';
+import { CheckboxModule } from 'primeng/checkbox';
+import { OverlayPanelModule } from 'primeng/overlaypanel';
+import { CreationPersonnagePage } from './personnages/pages/creation-personnage/creation-personnage.page';
+import { TestComponent } from './test/test.component';
+import { TestPipe } from './test.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonnagePage,
     ListePersonnagesComponent,
-    CreationPersonnageComponent
+    CreationPersonnageComponent,
+    CreationPersonnagePage,
+    TestComponent,
+    TestPipe
   ],
   imports: [
     BrowserModule,

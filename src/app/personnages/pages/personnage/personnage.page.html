@@ -5,13 +5,13 @@
             <button pButton (click)="filtrerListe(false)">Inactifs</button>
             <button pButton (click)="enleverFiltre()">Tous</button>
         </div>
-        <button type="text" pButton label="Ajouter personnage" (click)="op.toggle($event)"></button>
+        <button type="text" pButton label="Ajouter personnage" routerLink="/creation"></button>
     </div>
     
     
     <p-overlayPanel #op [dismissable]="true" [showCloseIcon]="true">
         <ng-template pTemplate>
-            <app-creation-personnage (nouveauPersonnageCree)="sauvegarderPersonnage($event)"></app-creation-personnage>
+            <!-- <app-creation-personnage (nouveauPersonnageCree)="sauvegarderPersonnage($event)"></app-creation-personnage> -->
         </ng-template>
     </p-overlayPanel>
     
